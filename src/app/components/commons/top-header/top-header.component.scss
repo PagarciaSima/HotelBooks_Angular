@@ -44,3 +44,29 @@
         }   
     }
 }
+
+.top-header-right-content {
+    padding-right: 0;
+    text-align: end;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+        margin-left: 30px;
+        padding-right: 15px;
+
+        a {
+            font-size: 15px;
+            color: var(--paragraphColor);
+
+            &:hover {
+                color: var(--primaryColor);
+            }
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}
