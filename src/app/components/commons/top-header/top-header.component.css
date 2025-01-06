@@ -1,0 +1,59 @@
+.top-header-area {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.top-header-area .container-fluid {
+  max-width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.top-header-left-content {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.top-header-left-content li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.top-header-left-content li a {
+  display: block;
+  font-size: 15px;
+  padding-right: 22px;
+  position: relative;
+  color: var(--paragraphColor);
+}
+.top-header-left-content li a img {
+  right: 0;
+  top: 2px;
+  position: absolute;
+}
+.top-header-left-content li a:hover {
+  color: var(--primaryColor);
+}
+.top-header-left-content li:last-child {
+  margin-left: 0;
+}
+
+.top-header-right-content {
+  padding-right: 0;
+  text-align: end;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.top-header-right-content li {
+  display: inline-block;
+  margin-left: 30px;
+  padding-right: 15px;
+}
+.top-header-right-content li a {
+  font-size: 15px;
+  color: var(--paragraphColor);
+}
+.top-header-right-content li a:hover {
+  color: var(--primaryColor);
+}
+.top-header-right-content li:last-child {
+  margin-left: 0;
+}/*# sourceMappingURL=top-header.component.css.map */

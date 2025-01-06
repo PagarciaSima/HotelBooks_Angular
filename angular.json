@@ -31,6 +31,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
+              "node_modules/remixicon/fonts/remixicon.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
+              "node_modules/remixicon/fonts/remixicon.css",
               "src/styles.scss"
             ],
             "scripts": []
