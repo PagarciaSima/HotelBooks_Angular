@@ -1,1 +1,48 @@
-<p>home works!</p>
+<!--search page-->
+<div class="page-title-area bg-1 ptb-100">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Hoteles en cualquier parte del mundo</h2>
+            <p>Buscar hoteles</p>
+            <form class="banner-form-style">
+                <div class="row align-items-center py-2">
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group form-group-place">
+                            <label for="">Place</label>
+                            <input type="text" class="form-control" placeholder="Where are you going?">
+                            <img src="assets/images/icon/search.svg" alt="Place">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group"> 
+                            <label for="">Check In Date</label>
+                            <dp-date-picker theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="Check In Date">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label for="">Check out date</label>
+                            <dp-date-picker theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendario">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="form-group">
+                            <label for="">Passengers</label>
+                            <input type="text" class="form-control" placeholder="Add">
+                            <img src="assets/images/icon/user-check.svg" alt="Passengers">
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-112">
+                        <div class="form-group ps-0 pe-0">
+                            <button type="submit" class="src-btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

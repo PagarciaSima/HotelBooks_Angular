@@ -1,15 +1,196 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --paragraphColor: #696969;
     --primaryColor: #924dff;
+    --paragraphColor: #696969;
     --whiteColor: #ffffff;
     --blackColor: #2f3045;
-    --secondaryColor: #ff5b43;
-    --transition: -05s;
+    --secondaryColor: #ff5b4a;
+    --transition: .5s;
     --fontSize: 16px;
 }
 
 .bg-f3f7ff{
     background-color: #f3f7ff;
+}
+
+.page-title-area {
+	background-color: var(--primaryColor);
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    &.bg-1 {
+        background-image: url(/assets/images/background/img-background.jpg);
+    }
+}
+
+.ptb-100 {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    };
+}
+
+
+.form-control {
+    height: 60px;
+	border-radius: 5px;
+    color: var(--blackColor);
+	font-size: var(--fontSize);
+	background-color: #f9f9f9;
+	border: 1px solid #e5e5e5;
+    box-shadow: unset !important;
+    transition: var(--transition);
+    padding: {
+        right: 20px;
+        left: 20px;
+    };
+	&::placeholder {
+		color: #666666;
+        transition: var(--transition);
+	}
+	&:focus {
+		border-color: var(--primaryColor);
+
+        &::placeholder {
+            color: transparent;
+        }
+	}
+}
+
+.page-title-content {
+	text-align: center;
+
+	h2 {
+		font-size: 55px;
+		margin-bottom: 18px;
+		color: var(--whiteColor);
+	}
+    p {
+        color: var(--whiteColor);
+        font-size: 18px;
+    }
+	.banner-form-style {
+        background-color: var(--whiteColor);
+        border-radius: 50px;
+        padding-right: 30px;
+        max-width: 1150px;
+        margin: {
+            top: 30px;
+            right: auto;
+            left: auto;
+        };
+        .form-group {
+            margin-bottom: 0;
+            text-align: end;
+            padding-right: 32px;
+            position: relative;
+            margin-right: 50px;
+
+            label {
+                margin-bottom: 3px;
+                color: var(--blackColor);
+                font: {
+                    size: var(--fontSize);
+                    weight: 600;
+                };
+            }
+            .form-control {
+                padding: 0;
+                height: auto;
+                border: none;
+                background-color: var(--whiteColor);
+                text-align: end;
+            }
+            img {
+                right: 0;
+                top: 5px;
+                position: absolute;
+            }
+            .src-btn {
+                padding: 0;
+                width: 72px;
+                height: 72px;
+                border: none;
+                font-size: 30px;
+                position: relative;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 50px;
+                color: var(--whiteColor);
+                transition: var(--transition);
+                background-color: var(--primaryColor);
+
+                i {
+                    right: 0;
+                    left: 0;
+                    top: 50%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+                &:hover {
+                    background-color: var(--secondaryColor);
+                }
+            }
+
+            &.form-group-place::after, &::before {
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                right: -20px;
+                content: '';
+                position: absolute;
+                background-color: #eeeeee;
+            }
+            dp-date-picker {
+                display: block;
+            }
+			.dp-picker-input {
+                width: 100%;
+                height: auto;
+                border: none;
+                direction: rtl;
+                display: block;
+                border-radius: 0;
+                color: var(--blackColor);
+                font-size: var(--fontSize);
+                box-shadow: unset !important;
+                transition: var(--transition);
+                background-color: var(--whiteColor);
+                padding: {
+                    right: 0;
+                    left: 0;
+                };
+                &::placeholder {
+                    color: #666666;
+                    transition: var(--transition);
+                }
+                &:focus {
+                    border-color: var(--primaryColor);
+            
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+			}
+        }
+        .col-xl-3 {
+            &:nth-child(1) {
+                .form-group {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .col-lg-1 {
+            .form-group {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+	}
 }
