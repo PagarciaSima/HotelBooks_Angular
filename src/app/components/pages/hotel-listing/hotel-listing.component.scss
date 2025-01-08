@@ -1,0 +1,174 @@
+.left-sidebar {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 25px;
+    
+    .single-widget {
+        border-bottom: 1px solid rgba(104, 105, 125, 0.1);
+        padding: {
+            right: 25px;
+            left: 25px;
+            bottom: 25px;
+        };
+        margin: {
+            right: -25px;
+            left: -25px;
+            bottom: 25px;
+        };
+        h3 {
+           font-size: 20px;
+           margin-bottom: 20px; 
+        }
+        form {
+            position: relative;
+
+            .form-control {
+                background-color: var(--whiteColor);
+                height: 54px;
+                padding-left: 40px;
+            }
+            .src-btn {
+                top: 14px;
+                padding: 0;
+                left: 17px;
+                border: none;
+                position: absolute;
+                background-color: transparent;
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--primaryColor);
+                }
+
+            }
+
+        }
+        .form-select {
+            height: 54px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: var(--blackColor);
+            font-size: var(--fontSize);
+            border: 1px solid #e5e5e5;
+            box-shadow: unset !important;
+            transition: var(--transition);
+            background-color: var(--whiteColor);
+            padding: {
+                right: 20px;
+                left: 30px;
+            };
+            &:focus {
+                border-color: var(--primaryColor);
+
+                &::placeHolder {
+                    color: transparent;
+                }
+            }
+        }
+
+    }
+}
+.hotels-listing{
+    padding-right: 10px;
+
+    .sorting{
+        padding-right: 0;
+        margin-bottom: 30px;
+        list-style-type: none;
+
+        li {
+            .form-select {
+                border: none;
+                cursor: pointer;
+                box-shadow: none;
+                margin-bottom: -3px;
+                padding: 0 0 3px 22px;
+                color: var(--paragraphColor);
+                background: {
+                    position: right 0 center;
+                    color: transparent;
+                };
+            }
+        }
+    }
+}
+
+.hotels-list {
+    padding-right: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    .single-hotel-box {
+        background-color: #f9f9f9;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        padding: 30px;
+
+        img {
+            border-radius: 5px;
+        }
+        .content {
+            border-left: 1px solid #eeeeee;
+            padding-left: 20px;
+
+            h3 {
+                font-size: 22px;
+                margin-bottom: 7px;
+            }
+            p {
+                margin-bottom: 8px;
+            }
+            .rating {
+                margin-bottom: 8px;
+
+                i {
+                    font-size: 18px;
+                    color: #f99e29;
+                    margin-left: 2px;
+                }
+            }
+            .price {
+                margin-bottom: 20px;
+                font: {
+                    size: 20px;
+                    weight: 700;
+                };
+                span {
+                    font: {
+                        weight: normal;
+                        size: 15px;
+                    }
+                }
+            }
+            .default-btn {
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+            }
+
+        }
+        .info {
+            padding-right: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-right: 25px;
+                margin-bottom: 20px;
+
+                i {
+                    color: var(--primaryColor);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+}
