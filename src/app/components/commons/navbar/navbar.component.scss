@@ -71,8 +71,11 @@
                     }
                 }
             }
+            &.for-responsive {
+                display: none;
+            }
         }
-        .others-option {
+        .others-option{
             form{
                 position: relative;
 
@@ -117,3 +120,324 @@
         }
     }
 }
+
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .navbar-area {
+        background-color: var(--whiteColor);
+        padding: {
+            top: 12px;
+            bottom: 12px;
+        };
+        .navbar {
+            .navbar-nav {
+                display: none;
+                max-height: 50vh;
+                flex-direction: unset;
+                background-color: #f9f9f9;
+                overflow: {
+                    y: scroll;
+                    x: hidden;
+                };
+                margin: {
+                    top: 15px;
+                    right: 0 !important;
+                    left: 0 !important;
+                };
+                padding: {
+                    top: 18px;
+                    right: 18px;
+                    left: 18px;
+                    bottom: 18px;
+                };
+                .nav-item {
+                    margin: {
+                        right: 0;
+                        left: 0;
+                        top: 18px;
+                        bottom: 18px;
+                    };
+                    .nav-link {
+                        font-size: 15px;
+                        color: var(--blackColor);
+                        padding: {
+                            top: 0;
+                            bottom: 0;
+                            right: 0 !important;
+                        };
+                        &.active, &:hover {
+                            color: var(--primaryColor);
+                        }
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &.for-responsive {
+                    display: block;
+                }
+            }
+            .others-option {
+                margin-top: 15px;
+
+                form {
+                    .form-control {
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 5px;
+                    }
+                    .search-btn {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 18px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-light {
+        .navbar-toggler {
+            color: var(--blackColor);
+            font-size: inherit;
+            box-shadow: unset;
+            border: none;
+            padding: 0;
+
+            .burger-menu {
+                cursor: pointer;
+
+                span {
+                    height: 3px;
+                    width: 30px;
+                    margin: 5px 0;
+                    display: block;
+                    background: var(--blackColor);
+                }
+            }
+        }
+        &.active {
+            .navbar-toggler {
+                .burger-menu {
+                    span {
+                        &.top-bar {
+                            transform: rotate(-45deg);
+                            transform-origin: 90% 10%;
+                        }
+                        &.middle-bar {
+                            opacity: 0;
+                        }
+                        &.bottom-bar {
+                            transform: rotate(45deg);
+                            transform-origin: 90% 90%;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+            .collapse:not(.show) {
+                display: block;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .navbar-area {
+        background-color: var(--whiteColor);
+        padding: {
+            top: 12px;
+            bottom: 12px;
+        };
+        .navbar {
+            .navbar-nav {
+                display: none;
+                max-height: 50vh;
+                flex-direction: unset;
+                background-color: #f9f9f9;
+                overflow: {
+                    y: scroll;
+                    x: hidden;
+                };
+                margin: {
+                    top: 15px;
+                    right: 0 !important;
+                    left: 0 !important;
+                };
+                padding: {
+                    top: 18px;
+                    right: 18px;
+                    left: 18px;
+                    bottom: 18px;
+                };
+                .nav-item {
+                    margin: {
+                        right: 0;
+                        left: 0;
+                        top: 18px;
+                        bottom: 18px;
+                    };
+                    .nav-link {
+                        font-size: 15px;
+                        color: var(--blackColor);
+                        padding: {
+                            top: 0;
+                            bottom: 0;
+                            right: 0 !important;
+                        };
+                        &.active, &:hover {
+                            color: var(--primaryColor);
+                        }
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &:hover, &.active {
+                        a {
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+                &.for-responsive {
+                    display: block;
+                }
+            }
+            .others-option {
+                margin-top: 15px;
+
+                form {
+                    .form-control {
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 5px;
+                    }
+                    .search-btn {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 18px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-light {
+        .navbar-toggler {
+            color: var(--blackColor);
+            font-size: inherit;
+            box-shadow: unset;
+            border: none;
+            padding: 0;
+
+            .burger-menu {
+                cursor: pointer;
+
+                span {
+                    height: 3px;
+                    width: 30px;
+                    margin: 5px 0;
+                    display: block;
+                    background: var(--blackColor);
+                }
+            }
+        }
+        &.active {
+            .navbar-toggler {
+                .burger-menu {
+                    span {
+                        &.top-bar {
+                            transform: rotate(-45deg);
+                            transform-origin: 90% 10%;
+                        }
+                        &.middle-bar {
+                            opacity: 0;
+                        }
+                        &.bottom-bar {
+                            transform: rotate(45deg);
+                            transform-origin: 90% 90%;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+            .collapse:not(.show) {
+                display: block;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .navbar-area {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    margin: {
+                        right: 10px;
+                        left: 10px;
+                    };
+                    .nav-link {
+                        font-size: 15px;
+
+                        &::before {
+                            top: 34px;
+                        }
+                    }
+                }
+            }
+            .others-option {
+                form {
+                    .form-control {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .navbar-area {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    margin: {
+                        right: 12px;
+                        left: 12px;
+                    };
+                }
+            }
+            .others-option {
+                form {
+                    .form-control {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

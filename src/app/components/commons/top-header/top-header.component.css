@@ -56,4 +56,54 @@
 }
 .top-header-right-content li:last-child {
   margin-left: 0;
-}/*# sourceMappingURL=top-header.component.css.map */
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  .top-header-area {
+    text-align: center;
+  }
+  .top-header-left-content li {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  .top-header-left-content li a {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+  .top-header-left-content li a img {
+    top: 3px;
+  }
+  .top-header-left-content li:first-child {
+    margin-right: 0;
+  }
+  .top-header-right-content {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 23px;
+  }
+  .top-header-right-content li {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  .top-header-right-content li a {
+    font-size: 14px;
+  }
+  .top-header-right-content li:first-child {
+    margin-right: 0;
+  }
+}
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .top-header-area {
+    text-align: start;
+  }
+  .top-header-right-content {
+    text-align: end;
+    margin-top: 0;
+  }
+}
+/* Min width 768px to Max width 991px */
+/* Min width 992px to Max width 1199px */
+/* Min width 1200px to Max width 1399px */
+/* Min width 1600px *//*# sourceMappingURL=top-header.component.css.map */

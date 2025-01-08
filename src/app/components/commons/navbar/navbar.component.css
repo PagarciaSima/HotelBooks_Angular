@@ -59,6 +59,9 @@
 .navbar-area .navbar .navbar-nav .nav-item:hover .nav-link, .navbar-area .navbar .navbar-nav .nav-item.active .nav-link {
   color: var(--primaryColor);
 }
+.navbar-area .navbar .navbar-nav.for-responsive {
+  display: none;
+}
 .navbar-area .navbar .others-option form {
   position: relative;
 }
@@ -95,4 +98,224 @@
 }
 .navbar-area .navbar .others-option form .search-btn:hover {
   background-color: var(--secondaryColor);
-}/*# sourceMappingURL=navbar.component.css.map */
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  .navbar-area {
+    background-color: var(--whiteColor);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .navbar-area .navbar .navbar-nav {
+    display: none;
+    max-height: 50vh;
+    flex-direction: unset;
+    background-color: #f9f9f9;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 15px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 18px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+    color: var(--blackColor);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0 !important;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link.active, .navbar-area .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primaryColor);
+  }
+  .navbar-area .navbar .navbar-nav .nav-item:first-child {
+    margin-top: 0;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item:last-child {
+    margin-bottom: 0;
+  }
+  .navbar-area .navbar .navbar-nav.for-responsive {
+    display: block;
+  }
+  .navbar-area .navbar .others-option {
+    margin-top: 15px;
+  }
+  .navbar-area .navbar .others-option form .form-control {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .navbar-area .navbar .others-option form .search-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .navbar-light .navbar-toggler {
+    color: var(--blackColor);
+    font-size: inherit;
+    box-shadow: unset;
+    border: none;
+    padding: 0;
+  }
+  .navbar-light .navbar-toggler .burger-menu {
+    cursor: pointer;
+  }
+  .navbar-light .navbar-toggler .burger-menu span {
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    display: block;
+    background: var(--blackColor);
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.top-bar {
+    transform: rotate(-45deg);
+    transform-origin: 90% 10%;
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.middle-bar {
+    opacity: 0;
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.bottom-bar {
+    transform: rotate(45deg);
+    transform-origin: 90% 90%;
+    margin-top: 5px;
+  }
+  .navbar-light.active .collapse:not(.show) {
+    display: block;
+  }
+}
+/* Min width 576px to Max width 767px */
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-area {
+    background-color: var(--whiteColor);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .navbar-area .navbar .navbar-nav {
+    display: none;
+    max-height: 50vh;
+    flex-direction: unset;
+    background-color: #f9f9f9;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 15px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 18px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+    color: var(--blackColor);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0 !important;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link.active, .navbar-area .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primaryColor);
+  }
+  .navbar-area .navbar .navbar-nav .nav-item:first-child {
+    margin-top: 0;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item:last-child {
+    margin-bottom: 0;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item:hover a, .navbar-area .navbar .navbar-nav .nav-item.active a {
+    color: var(--primaryColor);
+  }
+  .navbar-area .navbar .navbar-nav.for-responsive {
+    display: block;
+  }
+  .navbar-area .navbar .others-option {
+    margin-top: 15px;
+  }
+  .navbar-area .navbar .others-option form .form-control {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .navbar-area .navbar .others-option form .search-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .navbar-light .navbar-toggler {
+    color: var(--blackColor);
+    font-size: inherit;
+    box-shadow: unset;
+    border: none;
+    padding: 0;
+  }
+  .navbar-light .navbar-toggler .burger-menu {
+    cursor: pointer;
+  }
+  .navbar-light .navbar-toggler .burger-menu span {
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    display: block;
+    background: var(--blackColor);
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.top-bar {
+    transform: rotate(-45deg);
+    transform-origin: 90% 10%;
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.middle-bar {
+    opacity: 0;
+  }
+  .navbar-light.active .navbar-toggler .burger-menu span.bottom-bar {
+    transform: rotate(45deg);
+    transform-origin: 90% 90%;
+    margin-top: 5px;
+  }
+  .navbar-light.active .collapse:not(.show) {
+    display: block;
+  }
+}
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar-area .navbar .navbar-nav .nav-item {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item .nav-link::before {
+    top: 34px;
+  }
+  .navbar-area .navbar .others-option form .form-control {
+    width: 200px;
+  }
+}
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .navbar-area .navbar .navbar-nav .nav-item {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  .navbar-area .navbar .others-option form .form-control {
+    width: 300px;
+  }
+}
+/* Min width 1600px *//*# sourceMappingURL=navbar.component.css.map */
