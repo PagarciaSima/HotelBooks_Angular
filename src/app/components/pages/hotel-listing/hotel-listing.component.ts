@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Hotel } from '../../../interface/hotel';
 
 @Component({
   selector: 'app-hotel-listing',
@@ -11,4 +12,5 @@ import { Component } from '@angular/core';
 export class HotelListingComponent {
   prices = [100, 200, 300, 400, 500]; 
 
+  @Input() hotels: Hotel[] = [];
 }
