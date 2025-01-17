@@ -40,21 +40,21 @@
                         </li>
                     </ul>
                     <ul class="hotels-list">
-                        <li class="single-hotel-box">
+                        <li *ngFor="let hotel of hotels; trackedBy: trackByID" class="single-hotel-box" >
                             <div class="row align-items-center">
                                 <div class="col-xl-5 col-lg-12 col-sm-12">
                                     <a class="d-block">
-                                        <img src="assets/images/hotels/hotel1.jpg" width="300" height="300" alt="hotel 1">
+                                        <img [src]="hotel.picture" width="300" height="300" alt="hotel 1">
                                     </a>
                                 </div>
                                 <div class="col-xl-4 col-lg-6 col-sm-7">
                                     <div class="content">
                                         <h3>
                                             <a>
-                                                Hotel California
+                                               {{ hotel.name }}
                                             </a>
                                         </h3>
-                                        <p>322 Los Ángeles, California</p>
+                                        <p>{{ hotel.street }}, {{ hotel.cityName }}</p>
                                         <div class="rating">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -62,8 +62,8 @@
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-half-fill"></i>
                                         </div>
-                                        <p>4.8/5 Wonderful (100 reviews)</p>
-                                        <div class="price">{{200 | currency: 'EUR'}} <span>Per night</span></div>
+                                        <p>{{ hotel.averageCalification }} Wonderful (100 reviews)</p>
+                                        <div class="price">{{ hotel.price| currency: 'EUR' }} <span>Per night</span></div>
                                         <a class="default-btn">Book</a>
                                     </div>
                                 </div>
@@ -93,112 +93,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="single-hotel-box">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-12 col-sm-12">
-                                    <a class="d-block">
-                                        <img src="assets/images/hotels/hotel2.jpg" width="300" height="300" alt="hotel 1">
-                                    </a>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-sm-7">
-                                    <div class="content">
-                                        <h3>
-                                            <a>
-                                                Hotel Transilvania
-                                            </a>
-                                        </h3>
-                                        <p>111 Los muermos, California</p>
-                                        <div class="rating">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-half-fill"></i>
-                                        </div>
-                                        <p>4.7/5 Wonderful (100 reviews)</p>
-                                        <div class="price">{{150 | currency: 'EUR'}} <span>Per night</span></div>
-                                        <a class="default-btn">Book</a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-sm-5">
-                                    <ul class="info">
-                                        <li>
-                                            <i class="ri-wifi-line"></i>
-                                            Free Wifi
-                                        </li>
-                                        <li>
-                                            <i class="ri-roadster-line"></i>
-                                            Free Parking
-                                        </li>
-                                        <li>
-                                            <i class="ri-wheelchair-line"></i>
-                                            Air Conditioning
-                                        </li>
-                                        <li>
-                                            <i class="ri-restaurant-2-line"></i>
-                                            Restaurant
-                                        </li>
-                                        <li>
-                                            <i class="ri-riding-line"></i>
-                                            Gym
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="single-hotel-box">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-12 col-sm-12">
-                                    <a class="d-block">
-                                        <img src="assets/images/hotels/hotel4.jpg" width="300" height="300" alt="hotel 1">
-                                    </a>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-sm-7">
-                                    <div class="content">
-                                        <h3>
-                                            <a>
-                                                Hotel ISBI
-                                            </a>
-                                        </h3>
-                                        <p>144 Marcoleta, Santiango, Chile</p>
-                                        <div class="rating">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-half-fill"></i>
-                                        </div>
-                                        <p>4.5/5 Wonderful (100 reviews)</p>
-                                        <div class="price">{{160 | currency: 'EUR'}} <span>Per night</span></div>
-                                        <a class="default-btn">Book</a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-sm-5">
-                                    <ul class="info">
-                                        <li>
-                                            <i class="ri-wifi-line"></i>
-                                            Free Wifi
-                                        </li>
-                                        <li>
-                                            <i class="ri-roadster-line"></i>
-                                            Free Parking
-                                        </li>
-                                        <li>
-                                            <i class="ri-wheelchair-line"></i>
-                                            Air Conditioning
-                                        </li>
-                                        <li>
-                                            <i class="ri-restaurant-2-line"></i>
-                                            Restaurant
-                                        </li>
-                                        <li>
-                                            <i class="ri-riding-line"></i>
-                                            Gym
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
+
+                        
                     </ul>
                 </div>
 
