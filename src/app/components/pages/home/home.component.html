@@ -4,26 +4,26 @@
         <div class="page-title-content">
             <h2>Hoteles en cualquier parte del mundo</h2>
             <p>Buscar hoteles</p>
-            <form class="banner-form-style">
+            <form class="banner-form-style" [formGroup]="hotelForm" (ngSubmit)="loadHotels()">
                 <div class="row align-items-center py-2">
                     <div class="col-xl-3 col-lg-6 col-sm-5">
                         <div class="form-group form-group-place">
                             <label for="">Place</label>
-                            <input type="text" class="form-control" placeholder="Where are you going?">
+                            <input type="text" formControlName="cityID" class="form-control" placeholder="Where are you going?">
                             <img src="assets/images/icon/search.svg" alt="Place">
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-sm-5">
                         <div class="form-group"> 
                             <label for="">Check In Date</label>
-                            <dp-date-picker theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <dp-date-picker formControlName="startDate" theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
                             <img src="assets/images/icon/calendar.svg" alt="Check In Date">
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-sm-5">
                         <div class="form-group">
                             <label for="">Check out date</label>
-                            <dp-date-picker theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <dp-date-picker formControlName="endDate" theme="dp-material" placeholder="Enter a date" [config]="datePickerConfig" required="true"></dp-date-picker>
                             <img src="assets/images/icon/calendar.svg" alt="calendario">
                         </div>
                     </div>

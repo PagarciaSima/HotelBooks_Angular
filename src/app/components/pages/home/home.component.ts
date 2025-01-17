@@ -4,6 +4,7 @@ import { HotelListingComponent } from '../hotel-listing/hotel-listing.component'
 import { HttpClientModule } from '@angular/common/http';
 import { Hotel } from '../../../interface/hotel';
 import { HotelsService } from '../../../services/hotels.service';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { HotelsService } from '../../../services/hotels.service';
   imports: [
     DpDatePickerModule,
     HotelListingComponent,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -23,15 +25,24 @@ export class HomeComponent {
   };
 
   hotels: Hotel[] = [];
+  hotelForm: FormGroup;
 
-  constructor(private hotelService: HotelsService) {
-    this.loadHotels();
+  constructor(
+    private hotelService: HotelsService,
+    private fb: FormBuilder
+  ) {
+    // this.loadHotels();
+    this.hotelForm = this.fb.group({
+      startDate: [''],
+      endDate: [''],
+      cityID: ['']
+    });
   }
 
   loadHotels(): void {
-    const startDate = '2024-10-10';
-    const endDate = '2024-10-20';
-    const cityID = 1;
+    
+    const { startDate, endDate, cityID } = this.hotelForm.value;
+
     this.hotelService.getHotels(startDate, endDate, cityID).subscribe({
       next: (data) => {
         this.hotels = data;
