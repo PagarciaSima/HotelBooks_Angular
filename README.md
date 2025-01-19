@@ -1,27 +1,63 @@
-# HotelsBooks
+# Angular and Java Spring Boot Hotels Book App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+This is a web application built with **Spring Boot 3.4.1** for the backend and **Angular 17** for the frontend. It manages and displays information about hotels, services, and reviews. The application is composed of **three microservices**:
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Frontend Repository
 
-## Code scaffolding
+The frontend of the application is built with Angular and can be found in the following repository:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Backend Repository - Spring Boot](https://github.com/PagarciaSima/HotelBooks_SpringBoot)
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- **Reviews Service**: Manages user reviews for hotels and services.
+- **Services Service**: Handles the various services offered by hotels.
+- **Hotels Service**: Manages hotel data, including room information, availability, and pricing.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Technologies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Backend**: Spring Boot 3.4.1
+- **Frontend**: Angular 17 (with standalone components)
+- **CSS**: SCSS for styling
+- **Libraries**:
+  - **Bootstrap**: ^5.3.3 for responsive design and UI components
+  - **ng2-date-picker**: ^17.0.0 for date selection functionality
+  - **remixicon**: ^4.2.0 for vector icon usage
+- **Database**: MySQL for data storage
+- **Microservices Architecture**: Each core feature (reviews, services, hotels) is handled by an independent microservice.
+- **OpenAPI Documentation**: The API is documented using **OpenAPI** in **YAML format** for **Swagger**, providing a clear interface for interaction with the backend.
+- **Containerization**: Docker is used to containerize the application, ensuring easy and consistent deployment across different environments.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Application Interface
+
+### Hotels search
+![Home](img/home.png)
+
+---
+
+## Database and Postman Collection
+
+- The **database** and the **Postman collection** are located in the `Extras` folder of the project.
+  - The database can be imported into your local database system for testing.
+  - The Postman collection can be used to test the endpoints of the API.
+- The **OpenAPI documentation** YAML files are also included in the project, providing the API interface for integration and testing.
+
+---
+
+## Setup and Installation
+
+### Backend (Spring Boot with Docker)
+
+1. Clone the repository.
+2. Navigate to the root folder where the `docker-compose.yml` file is located.
+3. Run Docker Compose to bring up the microservices:
+   ```bash
+   docker-compose up

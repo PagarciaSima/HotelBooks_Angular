@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                     <ul class="hotels-list">
-                        <li *ngFor="let hotel of hotels; trackedBy: trackByID" class="single-hotel-box" >
+                        <li *ngFor="let hotel of hotels" class="single-hotel-box" >
                             <div class="row align-items-center">
                                 <div class="col-xl-5 col-lg-12 col-sm-12">
                                     <a class="d-block">
@@ -69,25 +69,13 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-sm-5">
                                     <ul class="info">
-                                        <li>
-                                            <i class="ri-wifi-line"></i>
-                                            Free Wifi
-                                        </li>
-                                        <li>
-                                            <i class="ri-roadster-line"></i>
-                                            Free Parking
-                                        </li>
-                                        <li>
-                                            <i class="ri-wheelchair-line"></i>
-                                            Air Conditioning
-                                        </li>
-                                        <li>
-                                            <i class="ri-restaurant-2-line"></i>
-                                            Restaurant
-                                        </li>
-                                        <li>
-                                            <i class="ri-riding-line"></i>
-                                            Gym
+                                        <li *ngFor="let service of hotels[0].services">
+                                            <i *ngIf="service.serviceName=='Wifi gratis'" class="ri-wifi-line"></i>
+                                            <i *ngIf="service.serviceName=='Parking gratis'" class="ri-roadster-line"></i>
+                                            <i *ngIf="service.serviceName=='Aire acondicionado'" class="ri-wheelchair-line"></i>
+                                            <i *ngIf="service.serviceName=='Restaurante'" class="ri-restaurant-2-line"></i>
+                                            <i *ngIf="service.serviceName=='Gym'" class="ri-riding-line"></i>
+                                            {{service.serviceName}}
                                         </li>
                                     </ul>
                                 </div>
