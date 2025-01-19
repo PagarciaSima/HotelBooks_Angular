@@ -4,9 +4,9 @@ This is a web application built with **Spring Boot 3.4.1** for the backend and *
 
 ---
 
-## Frontend Repository
+## Backend Repository
 
-The frontend of the application is built with Angular and can be found in the following repository:
+The backend of the application is built with Spring Boot and can be found in the following repository:
 
 [Backend Repository - Spring Boot](https://github.com/PagarciaSima/HotelBooks_SpringBoot)
 
